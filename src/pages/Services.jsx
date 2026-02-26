@@ -1,5 +1,5 @@
 import React from "react";
-import Steps from "../components/Services/steps";
+import Steps from "../components/Services/Steps";
 
 import Reviews from "../components/Reviews";
 import Info from "../components/Services/Info";
