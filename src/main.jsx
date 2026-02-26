@@ -9,10 +9,12 @@ import Work from "./pages/Work.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<App />}>
           <Route path="/" element={<Home />} />

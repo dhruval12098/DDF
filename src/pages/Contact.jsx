@@ -6,6 +6,8 @@ import { format } from "date-fns"
 
 export default function Contact() {
   const [date, setDate] = useState()
+  const [budget, setBudget] = useState("")
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <div className="w-full min-h-screen pt-20 max-md:pt-16">
@@ -21,44 +23,64 @@ export default function Contact() {
       </div>
 
       {/* Form Text Layout */}
-      <div className="px-10 w-full max-md:px-4">
+      <form
+        className="px-10 w-full max-md:px-4"
+        action="https://formsubmit.co/dynamicdigitalforge@gmail.com"
+        method="POST"
+      >
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="/contact?success=1" />
+        <input type="hidden" name="_subject" value="New DDF Contact Form Submission" />
+        <input
+          type="hidden"
+          name="Desired Date"
+          value={date ? format(date, "PPP") : ""}
+        />
+        <input type="hidden" name="Budget" value={budget} />
         <h1 className="font-light text-4xl font-plus leading-relaxed flex flex-wrap items-baseline gap-x-3 gap-y-4 max-md:text-2xl max-md:leading-snug">
 
           Hi! My name is{" "}
           <input
             type="text"
+            name="Name"
             placeholder="Your Name"
-            className="border-b border-zinc-400 bg-transparent text-left placeholder:text-left focus:outline-none focus:ring-0 w-[320px] pb-1 max-md:w-full"
+            className="border-b border-zinc-400 bg-transparent text-left placeholder:text-left focus:outline-none focus:ring-0 w-[320px] pb-1 text-base max-md:w-full max-md:text-lg"
           />{" "}
           
           and I work with{" "}
           <input
             type="text"
+            name="Company"
             placeholder="Company Name"
-            className="border-b border-zinc-400 bg-transparent text-left placeholder:text-left focus:outline-none focus:ring-0 w-[320px] pb-1 max-md:w-full"
+            className="border-b border-zinc-400 bg-transparent text-left placeholder:text-left focus:outline-none focus:ring-0 w-[320px] pb-1 text-base max-md:w-full max-md:text-lg"
           />{" "}
           
-          I’m looking for a partner to help me with{" "}
+          I'm looking for a partner to help me with{" "}
           <input
             type="text"
+            name="Goal"
             placeholder="Your Goal"
-            className="border-b border-zinc-400 bg-transparent text-left placeholder:text-left focus:outline-none focus:ring-0 w-[520px] pb-1 max-md:w-full"
+            className="border-b border-zinc-400 bg-transparent text-left placeholder:text-left focus:outline-none focus:ring-0 w-[520px] pb-1 text-base max-md:w-full max-md:text-lg"
           />{" "}
           
           With an idea of having that completed{" "}
 
           {/* Modern Calendar */}
-          <Popover>
+          <Popover open={isOpen} onOpenChange={setIsOpen}>
             <PopoverTrigger asChild>
-              <button className="border-b border-zinc-400 bg-transparent text-left focus:outline-none pb-1 w-[260px] max-md:w-full">
+              <button className="border-b border-zinc-400 bg-transparent text-left focus:outline-none pb-1 w-[260px] text-base max-md:w-full max-md:text-lg">
                 {date ? format(date, "PPP") : "Select Date"}
               </button>
             </PopoverTrigger>
-            <PopoverContent className="w-auto p-0 bg-white rounded-xl shadow-xl border-none">
+            <PopoverContent className="w-auto p-2 bg-white rounded-xl shadow-xl border-none">
               <Calendar
                 mode="single"
                 selected={date}
-                onSelect={setDate}
+                onSelect={(selected) => {
+                  setDate(selected)
+                  setIsOpen(false)
+                }}
+                className="text-lg"
                 initialFocus
               />
             </PopoverContent>
@@ -67,10 +89,10 @@ export default function Contact() {
           {" "}I am hoping to stay around a budget range of{" "}
 
           {/* ShadCN Select */}
-          <Select>
-            <SelectTrigger className="border-b border-zinc-400 bg-transparent text-left focus:ring-0 focus:outline-none w-[220px] pb-1 max-md:w-full">
-              <SelectValue placeholder="Select Budget" />
-            </SelectTrigger>
+          <Select onValueChange={setBudget}>
+          <SelectTrigger className="border-b border-zinc-400 bg-transparent text-left focus:ring-0 focus:outline-none w-[220px] pb-1 text-base max-md:w-full max-md:text-lg">
+            <SelectValue placeholder="Select Budget" />
+          </SelectTrigger>
             <SelectContent className="rounded-xl">
               <SelectItem value="5k">₹5k - ₹10k</SelectItem>
               <SelectItem value="10k">₹10k - ₹25k</SelectItem>
@@ -83,13 +105,25 @@ export default function Contact() {
           
           <input
             type="email"
+            name="Email"
             placeholder="Your Email"
-            className="border-b border-zinc-400 bg-transparent text-left placeholder:text-left focus:outline-none focus:ring-0 w-[360px] pb-1 max-md:w-full"
+            className="border-b border-zinc-400 bg-transparent text-left placeholder:text-left focus:outline-none focus:ring-0 w-[360px] pb-1 text-base max-md:w-full max-md:text-lg"
           />{" "}
           
-          to start the conversation. Optionally, I’m sharing more:
+          to start the conversation. Optionally, I'm sharing more:
         </h1>
-      </div>
+        <div className="mt-8">
+          <button
+            type="submit"
+            className="border border-zinc-600 px-6 py-2 rounded-full"
+          >
+            Submit
+          </button>
+        </div>
+        {typeof window !== "undefined" && new URLSearchParams(window.location.search).get("success") === "1" && (
+          <p className="mt-4 text-green-600">Message sent successfully.</p>
+        )}
+      </form>
     </div>
   )
 }

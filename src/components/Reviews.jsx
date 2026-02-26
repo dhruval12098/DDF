@@ -42,11 +42,11 @@ const Reviews = () => {
   };
 
   const data = [
-    ["Karman Ventures", "William Barnes"],
-    ["Medallia", "Becky Chastain"],
-    ["Planetly", "Nina Walloch"],
-    ["Workiz Easy", "Tomer Levy"],
-    ["Premium Blend", "Ellen Kim"],
+    ["John Doe", "Working with this team was a game-changer for our business. Their strategies boosted our online presence significantly!"],
+    ["Jane Smith", "The website they designed for us is stunning and user-friendly. We've seen a huge increase in customer engagement."],
+    ["Michael Brown", "Their branding expertise helped us stand out in a crowded market. Highly recommend their services!"],
+    ["Emily Davis", "The social media campaigns they ran for us were incredibly effective. Our sales doubled within months."],
+    ["David Wilson", "A truly professional team that delivers results. Our new logo and branding have received amazing feedback."],
   ];
 
   return (
@@ -64,7 +64,7 @@ const Reviews = () => {
               className="grid grid-cols-3 items-center py-6 px-10 cursor-pointer max-md:grid-cols-2 max-md:items-start max-md:gap-2 max-md:px-4"
             >
               <h3 className="underline">{item[0]}</h3>
-              <p className="text-center max-md:text-right">{item[1]}</p>
+              <p className="text-center max-md:text-right">Review</p>
               <p className="justify-self-end underline max-md:col-span-2 max-md:justify-self-start">READ</p>
             </div>
 
@@ -95,7 +95,7 @@ const Reviews = () => {
                     className="w-28 h-28 rounded-xl mb-6"
                   />
                   <p className="leading-relaxed text-sm">
-                    They were transparent about the time and stages...
+                    {item[1]}
                   </p>
                 </div>
               </div>

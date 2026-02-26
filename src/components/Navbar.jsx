@@ -85,6 +85,13 @@ function Navbar() {
         ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="flex flex-col items-start gap-8 p-10 pt-24">
+          <Link
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className="text-2xl capitalize"
+          >
+            Home
+          </Link>
           {navItems.map((item, index) => (
             <Link
               key={index}

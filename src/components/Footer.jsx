@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="relative w-full min-h-screen bg-[var(--color-surface)] p-12 mt-20 flex max-md:flex-col max-md:gap-10 max-md:p-6">
-      <div className="w-1/2 font-grotesk uppercase flex flex-col items-start justify-between max-md:w-full max-md:gap-6">
+    <div className="relative w-full min-h-screen bg-[var(--color-surface)] p-12 mt-20 flex max-md:flex-col max-md:gap-10 max-md:p-6 max-md:pt-16">
+      <div className="w-1/2 font-grotesk uppercase flex flex-col items-start justify-between max-md:w-full max-md:gap-6 max-md:relative">
         <div>
           <h1 className="text-9xl leading-none -mb-10 max-md:text-5xl max-md:mb-0">Social</h1>
           <h1 className="text-9xl leading-none -mb-10 max-md:text-5xl max-md:mb-0">Growth</h1>
@@ -36,7 +36,11 @@ const Footer = () => {
             fill="currentColor"
           ></path>
         </svg> */}
-        <img src="/logo.svg" alt="Logo" className="h-10 w-auto block" />
+        <img
+          src="/logo.svg"
+          alt="Logo"
+          className="h-10 w-auto block max-md:absolute max-md:top-0 max-md:right-0"
+        />
 
       </div>
       <div className="w-1/2 max-md:w-full">
@@ -48,8 +52,8 @@ const Footer = () => {
             <a className="mb-3" href="#">
               S:
             </a>
-            <a href="#">Instagram</a>
-            <a href="#">Linkedn</a>
+            <a href="https://www.instagram.com/dynamicdigitalforge?igsh=MXZheno0ZmNjMmJxOA==">Instagram</a>
+            <a href="https://www.linkedin.com/company/dynamic-digital-forge/">LinkedIn</a>
             <a href="#">Facebook</a>
           </div>
           <div className="link underline mt-10 flex flex-col max-md:mt-6">
