@@ -37,7 +37,7 @@ export default function AboutPage() {
       <div className="w-full h-[70vw] px-10 overflow-hidden max-md:px-4">
         <img
           className="w-full h-full object-top object-cover rounded-lg"
-          src="../public/maingroup.png"
+          src="/maingroup.png"
           alt=""
         />
       </div>
