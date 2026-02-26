@@ -29,7 +29,7 @@ const FeaturedProjects = () => {
                   <h1 className="text-xl">{project.title}</h1>
                 </div>
                 <h1
-                  className={`absolute flex overflow-hidden top-1/2 -translate-y-1/2 text-[var(--color-text)] z-[9] text-8xl max-md:hidden ${
+                  className={`absolute flex overflow-hidden top-1/2 -translate-y-1/2 text-white  mix-blend-difference  z-[9] text-8xl max-md:hidden ${
                     isLeft
                       ? "left-full -translate-x-1/2"
                       : "right-full translate-x-1/2"
@@ -60,7 +60,7 @@ const FeaturedProjects = () => {
                     </div>
                   </div>
                 </Link>
-                <div className="label flex gap-5 mt-2 uppercase max-md:flex-wrap max-md:gap-2">
+                <div className="label flex gap-5 mt-2 uppercase max-md:flex-wrap max-md:gap-2 ">
                   {project.labels.map((label) => (
                     <h1
                       key={`${project.id}-${label}`}
