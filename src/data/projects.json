@@ -1,0 +1,104 @@
+[
+  {
+    "id": "bandg",
+    "slug": "bandg",
+    "title": "Bandg",
+    "company": "Bandg",
+    "hoverText": "Primary",
+    "labels": ["Branding", "Web", "Launch"],
+    "description": "Full presentation ecosystem and product launch materials for a bold consumer brand refresh.",
+    "heroImage": "/projects/Bandg/display.PNG",
+    "coverImage": "/projects/Bandg/img6.jpg",
+    "gallery": [
+      "/projects/Bandg/img1.jpg",
+      "/projects/Bandg/img3.png",
+      "/projects/Bandg/img5.png",
+      "/projects/Bandg/img2.png"
+    ]
+  },
+  {
+    "id": "cp",
+    "slug": "cp",
+    "title": "Cp",
+    "company": "Cp",
+    "hoverText": "Secondary",
+    "labels": ["Product", "Marketing", "Design"],
+    "description": "Strategic product storytelling and visual system rollout across key brand touchpoints.",
+    "heroImage": "/projects/Cp/display.jpg",
+    "coverImage": "/projects/Cp/cp2.png",
+    "gallery": [
+      "/projects/Cp/img4.png",
+      "/projects/Cp/img2.png",
+      "/projects/Cp/img3.png",
+      "/projects/Cp/img5.png"
+    ]
+  },
+  {
+    "id": "ddf",
+    "slug": "ddf",
+    "title": "DDF",
+    "company": "DDF",
+    "hoverText": "Momentum",
+    "labels": ["Experience", "Campaign", "Art Direction"],
+    "description": "A cohesive campaign kit with strong art direction and bold visual narrative.",
+    "heroImage": "/projects/DDF/img%20(1).png",
+    "coverImage": "/projects/DDF/img%20(2).jpg",
+    "gallery": [
+      "/projects/DDF/img%20(1).jpg",
+      "/projects/DDF/img%20(3).jpg",
+      "/projects/DDF/img%20(2).jpg",
+      "/projects/DDF/img%20(1).png"
+    ]
+  },
+  {
+    "id": "entice",
+    "slug": "entice",
+    "title": "Entice",
+    "company": "Entice",
+    "hoverText": "Signal",
+    "labels": ["Growth", "Brand", "Launch"],
+    "description": "End-to-end launch visuals with a focus on clarity, conversion, and momentum.",
+    "heroImage": "/projects/Entice/display.jpg",
+    "coverImage": "/projects/Entice/entice3.png",
+    "gallery": [
+      "/projects/Entice/entice1.png",
+      "/projects/Entice/entice2.png",
+      "/projects/Entice/entice4.png",
+      "/projects/Entice/entice5.png"
+    ]
+  },
+  {
+    "id": "tripzo",
+    "slug": "tripzo",
+    "title": "Tripzo",
+    "company": "Tripzo",
+    "hoverText": "Journey",
+    "labels": ["Travel", "UI", "Platform"],
+    "description": "A bold travel platform identity with flexible assets for multi-channel use.",
+    "heroImage": "/projects/Tripzo/display.jpg",
+    "coverImage": "/projects/Tripzo/tripzo4.png",
+    "gallery": [
+      "/projects/Tripzo/tripzo1.png",
+      "/projects/Tripzo/tripzo2.jpg",
+      "/projects/Tripzo/tripzo3.jpg",
+      "/projects/Tripzo/tripzo4.png"
+    ]
+  },
+  {
+    "id": "yumwinn",
+    "slug": "yumwinn",
+    "title": "Yumwinn",
+    "company": "Yumwinn",
+    "hoverText": "Flavor",
+    "labels": ["Food", "Packaging", "Retail"],
+    "description": "A fresh retail identity system with playful visuals and strong shelf impact.",
+    "heroImage": "/projects/Yumwinn/display.jpg",
+    "coverImage": "/projects/Yumwinn/img2.png",
+    "gallery": [
+      "/projects/Yumwinn/img1.png",
+      "/projects/Yumwinn/img2.png",
+      "/projects/Yumwinn/img3.png",
+      "/projects/Yumwinn/img4.png"
+    ]
+  }
+]
