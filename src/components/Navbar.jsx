@@ -16,7 +16,7 @@ function Navbar() {
   ];
 
   return (
-    <div className="fixed top-0 left-0 z-50 w-full px-11 py-4 flex justify-between items-center bg-white/3 backdrop-blur-[5px]">
+    <div className="fixed top-0 left-0 z-50 w-full px-11 py-4 flex justify-between items-center bg-white/3 mix-blend-difference">
       {/* Logo */}
       <Link to="/" className="flex items-center">
         {/* SVG unchanged */}
@@ -48,11 +48,11 @@ function Navbar() {
             fill="currentColor"
           ></path>
         </svg> */}
-        <img src="/logo.svg" alt="Logo" className="h-10 w-auto block" />
+        <img src="/logo.svg" alt="Logo" className="h-10 w-auto block mix-blend-difference" />
       </Link>
 
       {/* Desktop Links */}
-      <div className="links hidden md:flex gap-10">
+      <div className="links hidden md:flex gap-10 mix-blend-difference text-white">
         {navItems.map((item, index) => (
           <Link
             key={index}

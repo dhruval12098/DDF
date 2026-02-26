@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export const LandingPage = () => {
@@ -50,50 +51,52 @@ export const LandingPage = () => {
         ].map((item, index) => (
           <p className="text   ">{item}</p>
         ))}
-        <motion.div
-          className="start flex gap-1 items-center justify-between"
-          whileHover="hover"
-          variants={container}
-          initial="initial"
-        >
+        <Link to="/contact" className="block">
           <motion.div
-            className="btn border-[1px] rounded-full px-4 py-1 "
-            variants={{
-              initial: { backgroundColor: "var(--color-accent)", color: "#000" },
-              hover: { backgroundColor: "#000", color: "#fff" },
-            }}
-            transition={{ duration: 0.3 }}
+            className="start flex gap-1 items-center justify-between"
+            whileHover="hover"
+            variants={container}
+            initial="initial"
           >
-            Start Your Growth
-          </motion.div>
-          <motion.div
-            className="border rounded-full p-2"
-            variants={{
-              initial: { backgroundColor: "var(--color-accent)", color: "#000" },
-              hover: { backgroundColor: "#000", color: "#fff" },
-            }}
-            transition={{ duration: 0.3 }}
-          >
-            <motion.svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
+            <motion.div
+              className="btn border-[1px] rounded-full px-4 py-1 "
               variants={{
-                initial: { fill: "#000" },
-                hover: { fill: "#fff" },
+                initial: { backgroundColor: "var(--color-accent)", color: "#000" },
+                hover: { backgroundColor: "#000", color: "#fff" },
               }}
-              className="size-4"
+              transition={{ duration: 0.3 }}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-              />
-            </motion.svg>
+              Start Your Growth
+            </motion.div>
+            <motion.div
+              className="border rounded-full p-2"
+              variants={{
+                initial: { backgroundColor: "var(--color-accent)", color: "#000" },
+                hover: { backgroundColor: "#000", color: "#fff" },
+              }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                variants={{
+                  initial: { fill: "#000" },
+                  hover: { fill: "#fff" },
+                }}
+                className="size-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                />
+              </motion.svg>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </Link>
       </div>
     </div>
   );

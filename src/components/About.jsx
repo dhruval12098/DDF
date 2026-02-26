@@ -38,12 +38,14 @@ const About = () => {
           <h3 className="font-grotesk text-8xl mb-5 max-md:text-4xl">
             How we can help
           </h3>
-          <button
-            type="button "
-            className="bg-black text-white rounded-full px-3 py-2 text-left flex items-center justify-between gap-3"
+          <a
+            href="/about"
+            className="group w-1/2 relative overflow-hidden rounded-full bg-black px-3 py-2 text-left flex items-center justify-between gap-3 text-white"
           >
-            Read More
-            <div className="border rounded-full p-2">
+            <span className="relative z-10 transition-colors duration-300 group-hover:text-black">
+              Read More
+            </span>
+            <span className="relative z-10 border border-white rounded-full p-2 transition-colors duration-300 group-hover:border-black text-white group-hover:text-black">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -58,8 +60,9 @@ const About = () => {
                   d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
                 />
               </svg>
-            </div>
-          </button>
+            </span>
+            <span className="absolute inset-0 rounded-full bg-white translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0 group-[&:not(:hover)]:-translate-y-full"></span>
+          </a>
         </div>
         <div className="left w-[50%] bg-red-500 h-[32vw] rounded-xl object-cover object-center overflow-hidden max-md:w-full max-md:h-[60vw]">
           <img src="./image.png" alt="" />
